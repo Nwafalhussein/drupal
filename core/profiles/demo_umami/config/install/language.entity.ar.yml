@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ar
+label: Arabic
+direction: ltr
+weight: 1
+locked: false
