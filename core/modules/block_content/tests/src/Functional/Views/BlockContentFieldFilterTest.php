@@ -77,37 +77,19 @@ class BlockContentFieldFilterTest extends BlockContentTestBase {
   public function testFilters() {
     // Test the info filter page, which filters for info contains 'Comida'.
     // Should show just the Spanish translation, once.
-    $this->assertPageCounts('test-info-filter', ['es' => 1, 'fr' => 0, 'en' => 0], 'Comida info filter');
+    $this->assertPageCounts('test-info-filter', ['es' => 1, 'fr' => 0, 'en' => 0 , "ar" => 0], 'Comida info filter');
     
     // Test the body filter page, which filters for body contains 'Comida'.
     // Should show just the Spanish translation, once.
-    $this->assertPageCounts('test-body-filter', ['es' => 1, 'fr' => 0, 'en' => 0], 'Comida body filter');
+    $this->assertPageCounts('test-body-filter', ['es' => 1, 'fr' => 0, 'en' => 0 ,"ar" => 0], 'Comida body filter');
 
     // Test the info Paris filter page, which filters for info contains
     // 'Paris'. Should show each translation once.
-    $this->assertPageCounts('test-info-paris', ['es' => 1, 'fr' => 1, 'en' => 1], 'Paris info filter');
+    $this->assertPageCounts('test-info-paris', ['es' => 1, 'fr' => 1, 'en' => 1 ,"ar" => 1], 'Paris info filter');
 
     // Test the body Paris filter page, which filters for body contains
     // 'Paris'. Should show each translation once.
-    $this->assertPageCounts('test-body-paris', ['es' => 1, 'fr' => 1, 'en' => 1], 'Paris body filter');
-  }
-
-  public function testFilters() {
-    // Test the info filter page, which filters for info contains 'Comida'.
-    // Should show just the Spanish translation, once.
-    $this->assertPageCounts('test-info-filter', ['ar' => 1, 'fr' => 0, 'en' => 0], 'Comida info filter');
-    
-    // Test the body filter page, which filters for body contains 'Comida'.
-    // Should show just the Spanish translation, once.
-    $this->assertPageCounts('test-body-filter', ['ar' => 1, 'fr' => 0, 'en' => 0], 'Comida body filter');
-
-    // Test the info Paris filter page, which filters for info contains
-    // 'Paris'. Should show each translation once.
-    $this->assertPageCounts('test-info-paris', ['ar' => 1, 'fr' => 1, 'en' => 1], 'Paris info filter');
-
-    // Test the body Paris filter page, which filters for body contains
-    // 'Paris'. Should show each translation once.
-    $this->assertPageCounts('test-body-paris', ['ar' => 1, 'fr' => 1, 'en' => 1], 'Paris body filter');
+    $this->assertPageCounts('test-body-paris', ['es' => 1, 'fr' => 1, 'en' => 1 , "ar" => 1], 'Paris body filter');
   }
 
   /**
